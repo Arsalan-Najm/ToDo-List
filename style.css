@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bad Script",cursive;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #0c0c0c;
+}
+.toDo-list {
+	position: relative;
+	min-width: 400px;
+	min-height: 400px;
+}
+.toDo-list h1 {
+	text-align: center;
+	font-size: 4rem;
+	color: #b40021;
+}
+.toDo-list h1 span {
+	color: #f9f9f9;
+	font-weight: 800;
+}
+.input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 30px;
+}
+.input .input-content {
+	width: 300px;
+	height: 30px;
+	outline: none;
+	border: none;
+	padding: 15px 0;
+	padding: 0 5px;
+	background: #fff;
+	font-size: 18px;
+}
+.input .input-content::placeholder {
+	color: rgba(0,0,0,.5);
+}
+.input button {
+	margin: 0 10px;
+	width: 30px;
+	height: 30px;
+	outline: none;
+	border: none;
+	background: #b40021;
+	cursor: pointer;
+	color: #fff;
+	font-size: 18px;
+}
+.toDo-list .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.toDo-list .content .item .task {
+	position: relative;
+	width: 450px;
+	height: 40px;
+	outline: none;
+	margin-top: 10px;
+	background: #000;
+	border: 2px solid rgba(255,255,255,.5);
+	font-size: 18px;
+	color: #f9f9f9;
+	padding: 5px 10px;
+}
+.toDo-list .content .item .task.done {
+    opacity: .4;
+    user-select: none;
+    pointer-events: none;
+}
+.toDo-list .content .item .task.done .remove {
+	pointer-events: auto;
+}
+.toDo-list .content .item .task.done .remove:hover {
+	opacity: 1;
+	background: #920002;
+}
+.remove {
+	position: absolute;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background: #b40021;
+	color: #fff;
+	left: 411px;
+	bottom: 0px;
+	width: 35px;
+	height: 35px;
+	transition: .3s;
+	cursor: pointer;
+}
+.checked {
+	position: absolute;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background: #11c466;
+	color: #fff;
+	left: 375px;
+	bottom: 0px;
+	width: 35px;
+	height: 35px;
+	transition: .3s;
+	cursor: pointer;
+}
+.toDo-list .content .item .remove:hover,
+.toDo-list .content .item .checked:hover {
+	opacity: .7;
+}
